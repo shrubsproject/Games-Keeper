@@ -7,20 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07153D21278700030088B6B1 /* shadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07153D20278700030088B6B1 /* shadowButton.swift */; };
+		07153D23278701D30088B6B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07153D22278701D30088B6B1 /* ViewController.swift */; };
+		0727AAF12781F7E0007DA67E /* second.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0727AAF02781F7E0007DA67E /* second.swift */; };
+		078590CF2782056F002CF6B6 /* dashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590CE2782056F002CF6B6 /* dashboardViewModel.swift */; };
+		078590D1278205A2002CF6B6 /* dashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590D0278205A2002CF6B6 /* dashboardViewController.swift */; };
+		078590D3278205E4002CF6B6 /* gameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590D2278205E4002CF6B6 /* gameViewController.swift */; };
+		078590D527820612002CF6B6 /* addPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590D427820612002CF6B6 /* addPlayerViewController.swift */; };
+		078590D72782062B002CF6B6 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590D62782062B002CF6B6 /* resultViewController.swift */; };
+		078590D927820658002CF6B6 /* gameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590D827820658002CF6B6 /* gameViewModel.swift */; };
+		078590DB27820669002CF6B6 /* addPlyaerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590DA27820669002CF6B6 /* addPlyaerViewModel.swift */; };
+		078590DD2782067C002CF6B6 /* resultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590DC2782067C002CF6B6 /* resultViewModel.swift */; };
 		07FA5C132781D85000211316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FA5C122781D85000211316 /* AppDelegate.swift */; };
-		07FA5C152781D85000211316 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FA5C142781D85000211316 /* SceneDelegate.swift */; };
-		07FA5C172781D85000211316 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FA5C162781D85000211316 /* ViewController.swift */; };
-		07FA5C1A2781D85000211316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07FA5C182781D85000211316 /* Main.storyboard */; };
 		07FA5C1C2781D85200211316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07FA5C1B2781D85200211316 /* Assets.xcassets */; };
 		07FA5C1F2781D85200211316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07FA5C1D2781D85200211316 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07153D20278700030088B6B1 /* shadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shadowButton.swift; sourceTree = "<group>"; };
+		07153D22278701D30088B6B1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/ViewController.swift"; sourceTree = "<group>"; };
+		0727AAF02781F7E0007DA67E /* second.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = second.swift; sourceTree = "<group>"; };
+		078590CE2782056F002CF6B6 /* dashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardViewModel.swift; sourceTree = "<group>"; };
+		078590D0278205A2002CF6B6 /* dashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardViewController.swift; sourceTree = "<group>"; };
+		078590D2278205E4002CF6B6 /* gameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameViewController.swift; sourceTree = "<group>"; };
+		078590D427820612002CF6B6 /* addPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPlayerViewController.swift; sourceTree = "<group>"; };
+		078590D62782062B002CF6B6 /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
+		078590D827820658002CF6B6 /* gameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameViewModel.swift; sourceTree = "<group>"; };
+		078590DA27820669002CF6B6 /* addPlyaerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPlyaerViewModel.swift; sourceTree = "<group>"; };
+		078590DC2782067C002CF6B6 /* resultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewModel.swift; sourceTree = "<group>"; };
 		07FA5C0F2781D85000211316 /* shrubsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shrubsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FA5C122781D85000211316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07FA5C142781D85000211316 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		07FA5C162781D85000211316 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		07FA5C192781D85000211316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07FA5C1B2781D85200211316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07FA5C1E2781D85200211316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07FA5C202781D85200211316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +53,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0700A6C92781F5A90055B09F /* support file */ = {
+			isa = PBXGroup;
+			children = (
+				07FA5C122781D85000211316 /* AppDelegate.swift */,
+				07FA5C1B2781D85200211316 /* Assets.xcassets */,
+				07FA5C1D2781D85200211316 /* LaunchScreen.storyboard */,
+				07FA5C202781D85200211316 /* Info.plist */,
+			);
+			path = "support file";
+			sourceTree = "<group>";
+		};
+		0700A6CA2781F5B60055B09F /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0700A6CB2781F5BD0055B09F /* view model */ = {
+			isa = PBXGroup;
+			children = (
+				078590CE2782056F002CF6B6 /* dashboardViewModel.swift */,
+				078590D827820658002CF6B6 /* gameViewModel.swift */,
+				078590DA27820669002CF6B6 /* addPlyaerViewModel.swift */,
+				078590DC2782067C002CF6B6 /* resultViewModel.swift */,
+			);
+			path = "view model";
+			sourceTree = "<group>";
+		};
+		0700A6CC2781F5C60055B09F /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				078590D0278205A2002CF6B6 /* dashboardViewController.swift */,
+				078590D2278205E4002CF6B6 /* gameViewController.swift */,
+				078590D427820612002CF6B6 /* addPlayerViewController.swift */,
+				078590D62782062B002CF6B6 /* resultViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		0700A6CD2781F5D20055B09F /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		0700A6CE2781F5E50055B09F /* custom view */ = {
+			isa = PBXGroup;
+			children = (
+				07153D20278700030088B6B1 /* shadowButton.swift */,
+			);
+			path = "custom view";
+			sourceTree = "<group>";
+		};
 		07FA5C062781D85000211316 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +127,14 @@
 		07FA5C112781D85000211316 /* shrubsProject */ = {
 			isa = PBXGroup;
 			children = (
-				07FA5C122781D85000211316 /* AppDelegate.swift */,
-				07FA5C142781D85000211316 /* SceneDelegate.swift */,
-				07FA5C162781D85000211316 /* ViewController.swift */,
-				07FA5C182781D85000211316 /* Main.storyboard */,
-				07FA5C1B2781D85200211316 /* Assets.xcassets */,
-				07FA5C1D2781D85200211316 /* LaunchScreen.storyboard */,
-				07FA5C202781D85200211316 /* Info.plist */,
+				0700A6CC2781F5C60055B09F /* controllers */,
+				0700A6CB2781F5BD0055B09F /* view model */,
+				0700A6CE2781F5E50055B09F /* custom view */,
+				0700A6CA2781F5B60055B09F /* model */,
+				0700A6CD2781F5D20055B09F /* service */,
+				0700A6C92781F5A90055B09F /* support file */,
+				0727AAF02781F7E0007DA67E /* second.swift */,
+				07153D22278701D30088B6B1 /* ViewController.swift */,
 			);
 			path = shrubsProject;
 			sourceTree = "<group>";
@@ -127,7 +199,6 @@
 			files = (
 				07FA5C1F2781D85200211316 /* LaunchScreen.storyboard in Resources */,
 				07FA5C1C2781D85200211316 /* Assets.xcassets in Resources */,
-				07FA5C1A2781D85000211316 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +209,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07FA5C172781D85000211316 /* ViewController.swift in Sources */,
+				078590D3278205E4002CF6B6 /* gameViewController.swift in Sources */,
+				07153D23278701D30088B6B1 /* ViewController.swift in Sources */,
+				078590D527820612002CF6B6 /* addPlayerViewController.swift in Sources */,
 				07FA5C132781D85000211316 /* AppDelegate.swift in Sources */,
-				07FA5C152781D85000211316 /* SceneDelegate.swift in Sources */,
+				078590D72782062B002CF6B6 /* resultViewController.swift in Sources */,
+				078590D927820658002CF6B6 /* gameViewModel.swift in Sources */,
+				0727AAF12781F7E0007DA67E /* second.swift in Sources */,
+				07153D21278700030088B6B1 /* shadowButton.swift in Sources */,
+				078590DB27820669002CF6B6 /* addPlyaerViewModel.swift in Sources */,
+				078590CF2782056F002CF6B6 /* dashboardViewModel.swift in Sources */,
+				078590DD2782067C002CF6B6 /* resultViewModel.swift in Sources */,
+				078590D1278205A2002CF6B6 /* dashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		07FA5C182781D85000211316 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07FA5C192781D85000211316 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		07FA5C1D2781D85200211316 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,14 +359,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SF9YWD6YY4;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = shrubsProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,6 +375,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ilya-Egorov.shrubsProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,14 +387,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SF9YWD6YY4;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = shrubsProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,6 +403,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ilya-Egorov.shrubsProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
