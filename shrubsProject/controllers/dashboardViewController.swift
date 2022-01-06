@@ -19,6 +19,7 @@ final class dashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prostoUI()
+        configuredLayout()
     }
     
     func prostoUI() {
@@ -47,6 +48,28 @@ final class dashboardViewController: UIViewController {
         headerLabel.font = UIFont(name: "Zapf Dignbats", size: 30)
         headerLabel.text = "game counter"
         headerLabel.textColor = UIColor.white
+        if let rootViewController = UIApplication.shared.delegate?.window??.rootViewController, rootViewController !== navigationController
+        { navigationItem.leftBarButtonItem = UIBarButtonItem(title: "cancel", style: .plain, target: self, action: #selector(dismissView))
+        }
         
+    }
+    
+    @objc func dismissView(){
+        navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+//    @objc func start(){
+//
+//    }
+    
+    func configuredLayout() {
+        headerLabel.translatesAutoresizingMaskIntoConstraints = false
+        startGameButton.translatesAutoresizingMaskIntoConstraints = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableViewHeightContraint = tableView.heightAnchor.constraint(equalToConstant: 110)
+        NSLayoutConstraint.activate([
+        
+            startGameButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 100)
+        ])
     }
 }
