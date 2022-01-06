@@ -69,7 +69,31 @@ final class dashboardViewController: UIViewController {
         tableViewHeightContraint = tableView.heightAnchor.constraint(equalToConstant: 110)
         NSLayoutConstraint.activate([
         
-            startGameButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 100)
+            startGameButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -Constants.startGameButtonOfSet),
+            startGameButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constants.leadingOfSet),
+            startGameButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            startGameButton.heightAnchor.constraint(equalToConstant: Constants.startButtonHeight),
+            tableView.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: Constants.tableViewOfSet),
+            tableView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constants.leadingOfSet), tableViewHeightContraint,
+            headerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constants.leadingOfSet),
+            headerLabel.heightAnchor.constraint(equalToConstant: Constants.headerLabelHeight)
         ])
+    }
+    
+//   func configuredViewModel() {
+//
+//    }
+//
+}
+
+extension dashboardViewController{
+    enum Constants{
+        static let startGameButtonOfSet: CGFloat = 50.0
+        static let leadingOfSet: CGFloat = 20.0
+        static let startButtonHeight: CGFloat = 55.0
+        static let tableViewOfSet: CGFloat = 20.0
+        static let headerLabelHeight: CGFloat = 40.0
     }
 }

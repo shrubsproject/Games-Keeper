@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		07153D21278700030088B6B1 /* shadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07153D20278700030088B6B1 /* shadowButton.swift */; };
-		07153D23278701D30088B6B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07153D22278701D30088B6B1 /* ViewController.swift */; };
+		07153D252787659D0088B6B1 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07153D242787659D0088B6B1 /* player.swift */; };
+		07153D27278766150088B6B1 /* ent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07153D26278766150088B6B1 /* ent.swift */; };
 		0727AAF12781F7E0007DA67E /* second.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0727AAF02781F7E0007DA67E /* second.swift */; };
 		078590CF2782056F002CF6B6 /* dashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590CE2782056F002CF6B6 /* dashboardViewModel.swift */; };
 		078590D1278205A2002CF6B6 /* dashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590D0278205A2002CF6B6 /* dashboardViewController.swift */; };
@@ -25,7 +26,8 @@
 
 /* Begin PBXFileReference section */
 		07153D20278700030088B6B1 /* shadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shadowButton.swift; sourceTree = "<group>"; };
-		07153D22278701D30088B6B1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/ViewController.swift"; sourceTree = "<group>"; };
+		07153D242787659D0088B6B1 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
+		07153D26278766150088B6B1 /* ent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ent.swift; sourceTree = "<group>"; };
 		0727AAF02781F7E0007DA67E /* second.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = second.swift; sourceTree = "<group>"; };
 		078590CE2782056F002CF6B6 /* dashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardViewModel.swift; sourceTree = "<group>"; };
 		078590D0278205A2002CF6B6 /* dashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 		0700A6CA2781F5B60055B09F /* model */ = {
 			isa = PBXGroup;
 			children = (
+				07153D242787659D0088B6B1 /* player.swift */,
+				07153D26278766150088B6B1 /* ent.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -134,7 +138,6 @@
 				0700A6CD2781F5D20055B09F /* service */,
 				0700A6C92781F5A90055B09F /* support file */,
 				0727AAF02781F7E0007DA67E /* second.swift */,
-				07153D22278701D30088B6B1 /* ViewController.swift */,
 			);
 			path = shrubsProject;
 			sourceTree = "<group>";
@@ -210,13 +213,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				078590D3278205E4002CF6B6 /* gameViewController.swift in Sources */,
-				07153D23278701D30088B6B1 /* ViewController.swift in Sources */,
 				078590D527820612002CF6B6 /* addPlayerViewController.swift in Sources */,
 				07FA5C132781D85000211316 /* AppDelegate.swift in Sources */,
 				078590D72782062B002CF6B6 /* resultViewController.swift in Sources */,
+				07153D252787659D0088B6B1 /* player.swift in Sources */,
 				078590D927820658002CF6B6 /* gameViewModel.swift in Sources */,
 				0727AAF12781F7E0007DA67E /* second.swift in Sources */,
 				07153D21278700030088B6B1 /* shadowButton.swift in Sources */,
+				07153D27278766150088B6B1 /* ent.swift in Sources */,
 				078590DB27820669002CF6B6 /* addPlyaerViewModel.swift in Sources */,
 				078590CF2782056F002CF6B6 /* dashboardViewModel.swift in Sources */,
 				078590DD2782067C002CF6B6 /* resultViewModel.swift in Sources */,
