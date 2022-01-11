@@ -160,7 +160,6 @@ extension dashboardViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         Constants.cHeight
     }
-    
 }
 
 extension dashboardViewController{
