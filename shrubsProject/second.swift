@@ -17,6 +17,7 @@ class Coordin: dashboardViewModelCordinat {
     enum State{
         case initial
         case games
+        case 1
     }
     
     let window: UIWindow
