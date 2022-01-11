@@ -19,6 +19,8 @@
 		078590D927820658002CF6B6 /* gameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590D827820658002CF6B6 /* gameViewModel.swift */; };
 		078590DB27820669002CF6B6 /* addPlyaerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590DA27820669002CF6B6 /* addPlyaerViewModel.swift */; };
 		078590DD2782067C002CF6B6 /* resultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590DC2782067C002CF6B6 /* resultViewModel.swift */; };
+		0799E2842788749600C72A3C /* playerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799E2832788749600C72A3C /* playerTextField.swift */; };
+		07C708B027878C3400B9235B /* userCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C708AF27878C3400B9235B /* userCell.swift */; };
 		07FA5C132781D85000211316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FA5C122781D85000211316 /* AppDelegate.swift */; };
 		07FA5C1C2781D85200211316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07FA5C1B2781D85200211316 /* Assets.xcassets */; };
 		07FA5C1F2781D85200211316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07FA5C1D2781D85200211316 /* LaunchScreen.storyboard */; };
@@ -37,6 +39,8 @@
 		078590D827820658002CF6B6 /* gameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameViewModel.swift; sourceTree = "<group>"; };
 		078590DA27820669002CF6B6 /* addPlyaerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPlyaerViewModel.swift; sourceTree = "<group>"; };
 		078590DC2782067C002CF6B6 /* resultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewModel.swift; sourceTree = "<group>"; };
+		0799E2832788749600C72A3C /* playerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerTextField.swift; sourceTree = "<group>"; };
+		07C708AF27878C3400B9235B /* userCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userCell.swift; sourceTree = "<group>"; };
 		07FA5C0F2781D85000211316 /* shrubsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shrubsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FA5C122781D85000211316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07FA5C1B2781D85200211316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				07153D20278700030088B6B1 /* shadowButton.swift */,
+				07C708AF27878C3400B9235B /* userCell.swift */,
+				0799E2832788749600C72A3C /* playerTextField.swift */,
 			);
 			path = "custom view";
 			sourceTree = "<group>";
@@ -220,10 +226,12 @@
 				078590D927820658002CF6B6 /* gameViewModel.swift in Sources */,
 				0727AAF12781F7E0007DA67E /* second.swift in Sources */,
 				07153D21278700030088B6B1 /* shadowButton.swift in Sources */,
+				0799E2842788749600C72A3C /* playerTextField.swift in Sources */,
 				07153D27278766150088B6B1 /* ent.swift in Sources */,
 				078590DB27820669002CF6B6 /* addPlyaerViewModel.swift in Sources */,
 				078590CF2782056F002CF6B6 /* dashboardViewModel.swift in Sources */,
 				078590DD2782067C002CF6B6 /* resultViewModel.swift in Sources */,
+				07C708B027878C3400B9235B /* userCell.swift in Sources */,
 				078590D1278205A2002CF6B6 /* dashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,9 +371,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SF9YWD6YY4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = shrubsProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -391,9 +400,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SF9YWD6YY4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = shrubsProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

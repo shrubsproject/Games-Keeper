@@ -14,12 +14,17 @@ final class dashboardViewController: UIViewController {
     var tableViewHeightContraint: NSLayoutConstraint!
     
     let headerLabel: UILabel = UILabel()
-//    var viewModel: dashboardViewModel!
+    var viewModel: dashboardViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         prostoUI()
         configuredLayout()
+        configuredViewModel()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(userCell.self, forCellReuseIdentifier: userCell.id)
     }
     
     func prostoUI() {
@@ -41,9 +46,9 @@ final class dashboardViewController: UIViewController {
         
         startGameButton.titleLabel?.font = UIFont(name: "Zapf Dignbats", size: 30)
         startGameButton.setTitle("start game", for: .normal)
-//        startGameButton.addTarget(self, action: #selector(start), for: .touchUpInside)
+        startGameButton.addTarget(self, action: #selector(start), for: .touchUpInside)
         startGameButton.isEnabled = false
-//        startGameButton.
+//        startGameButton.is
         
         headerLabel.font = UIFont(name: "Zapf Dignbats", size: 30)
         headerLabel.text = "game counter"
@@ -58,9 +63,9 @@ final class dashboardViewController: UIViewController {
         navigationController?.dismiss(animated: true, completion: nil)
     }
     
-//    @objc func start(){
-//
-//    }
+    @objc func start(){
+        viewModel.startGame()
+    }
     
     func configuredLayout() {
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -82,10 +87,80 @@ final class dashboardViewController: UIViewController {
         ])
     }
     
-//   func configuredViewModel() {
-//
-//    }
-//
+   func configuredViewModel() {
+       viewModel.onPlayerAdd = {[unowned self] in
+           self.tableView.reloadData()
+           let maxHeight = view.safeAreaLayoutGuide.layoutFrame.height - Constants.tableViewOfSetLim
+           self.tableViewHeightContraint.constant = min(maxHeight, Constants.cHeight * CGFloat(viewModel.players.count + 2))
+           if self.viewModel.players.count > 0 {
+               self.startGameButton.isEnabled = true
+           }
+       }
+       
+       viewModel.onPlayerDelete = {[unowned self] index in
+           self.tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .fade)
+           let maxHeight = view.safeAreaLayoutGuide.layoutFrame.height - Constants.tableViewOfSetLim
+           self.tableViewHeightContraint.constant = min(maxHeight, Constants.cHeight * CGFloat(viewModel.players.count + 2))
+           if self.viewModel.players.count == 0 {
+               self.startGameButton.isEnabled = false
+           }
+           self.tableView.reloadData()
+       }
+    }
+
+}
+
+extension dashboardViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection sectoin: Int) -> Int {
+        return viewModel.players.count + 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPatch: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: userCell.id) as! userCell
+
+        if indexPatch.row == viewModel.players.count{
+            cell.style = .add
+            cell.handler = {[unowned self] in
+                self.viewModel.addPlayer()
+            }
+        }
+        else{
+            cell.style = .user
+            cell.textLabel?.text = viewModel.players[indexPatch.row].name
+            cell.handler = { [unowned self, indexPatch] in
+                self.viewModel.deletePlayer(at: indexPatch.row)
+            }
+        }
+        cell.backgroundColor = UIColor.white
+        return cell
+    }
+    
+     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        Constants.cHeight
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: Constants.cHeight))
+        view.backgroundColor = UIColor.systemPink
+        
+        let label = UILabel(frame: .zero)
+        label.text = "Players"
+        label.font = UIFont(name: "Zapf Dignbats", size: 17)
+        label.textColor = UIColor.white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(label)
+        NSLayoutConstraint.activate([
+            label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)])
+        
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        Constants.cHeight
+    }
+    
 }
 
 extension dashboardViewController{
@@ -95,5 +170,7 @@ extension dashboardViewController{
         static let startButtonHeight: CGFloat = 55.0
         static let tableViewOfSet: CGFloat = 20.0
         static let headerLabelHeight: CGFloat = 40.0
+        static let tableViewOfSetLim: CGFloat = headerLabelHeight + startGameButtonOfSet + tableViewOfSet + 10.0
+        static let cHeight: CGFloat = 50.0
     }
 }
