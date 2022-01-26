@@ -8,11 +8,7 @@
 import Foundation
 import UIKit
 
-class Coordin: dashboardViewModelCordinat {
-    
-    func addPlayer(handler: @escaping ((String) -> Bool)) {
-        
-    }
+class Coordin: dashboardViewModelCordinat, addPlayerViewModelCordinat {
     
     enum State{
         case initial
@@ -32,6 +28,14 @@ class Coordin: dashboardViewModelCordinat {
         dashboardViewController.viewModel = dashboardViewModel
         return dashboardViewController
     }
+    
+    var  addPlayerVieController: addPlayerViewController{
+        let addPlayerViewController = addPlayerViewController()
+        let addPlayerViewModel = addPlayerViewModel(coordinat: self)
+        addPlayerViewController.viewModel = addPlayerViewModel
+        return addPlayerViewController
+    }
+    
     
     init (window: UIWindow){
         self.window = window
