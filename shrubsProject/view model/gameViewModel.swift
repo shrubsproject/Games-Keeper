@@ -8,9 +8,9 @@
 //import UIKit
 //
 //class gameViewModel{
-//    
+//
 //    var players: [Player]
 //    let StatusService: statusServis
-//    
+//
 //    init(players: [Player], coordin)
-}
+//}

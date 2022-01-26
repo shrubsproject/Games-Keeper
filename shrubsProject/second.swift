@@ -58,8 +58,10 @@ class Coordin {
 
 extension Coordin: dashboardViewModelCordinat{
     func startGame(with players: [Player]) {
-        let GameViewController = self.GameViewController
+        <#code#>
     }
+    
+    
     
     func addPlayer(handler: @escaping ((String) -> Bool)) {
         let AddPlayerViewController = self.AddPlayerViewController

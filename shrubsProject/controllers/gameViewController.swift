@@ -10,4 +10,8 @@ import UIKit
 final class gameViewController: UIViewController{
     
     let headerLabel = UILabel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
