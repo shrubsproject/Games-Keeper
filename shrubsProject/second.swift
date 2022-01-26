@@ -29,11 +29,11 @@ class Coordin: dashboardViewModelCordinat, addPlayerViewModelCordinat {
         return dashboardViewController
     }
     
-    var  addPlayerVieController: addPlayerViewController{
-        let addPlayerViewController = addPlayerViewController()
-        let addPlayerViewModel = addPlayerViewModel(coordinat: self)
-        addPlayerViewController.viewModel = addPlayerViewModel
-        return addPlayerViewController
+    var  AddPlayerViewController: addPlayerViewController{
+        let AddPlayerViewController = addPlayerViewController()
+        let AddPlayerViewModel = addPlayerViewModel(coordinat: self)
+        AddPlayerViewController.viewModel = AddPlayerViewModel
+        return AddPlayerViewController
     }
     
     
@@ -41,5 +41,31 @@ class Coordin: dashboardViewModelCordinat, addPlayerViewModelCordinat {
         self.window = window
         rootViewController = UINavigationController()
         window.rootViewController = rootViewController
+    }
+}
+
+extension Coordin: dashboardViewModelCordinat{
+    func startGame(with players: [Player]) {
+        <#code#>
+    }
+    
+    func addPlayer(handler: @escaping ((String) -> Bool)) {
+        let AddPlayerViewController = self.AddPlayerViewController
+        AddPlayerViewController.viewModel.onPlayerAdd = handler
+        if let modelNavigationController = modelNavigationViewController{
+            modelNavigationController.pushViewController(AddPlayerViewController, animated: true)
+        }else{
+            rootViewController.pushViewController(AddPlayerViewController, animated: true)
+        }
+    }
+}
+
+extension Coordin: addPlayerViewModelCordinat{
+    func dismiss() {
+        if let modelNavigationController = modelNavigationViewController {
+            modelNavigationController.popViewController(animated: true)
+        }else{
+            rootViewController.popViewController(animated: true)
+        }
     }
 }

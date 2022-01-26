@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0701569627A166B600CDC54F /* statusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701569527A166B600CDC54F /* statusService.swift */; };
 		07153D21278700030088B6B1 /* shadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07153D20278700030088B6B1 /* shadowButton.swift */; };
 		07153D252787659D0088B6B1 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07153D242787659D0088B6B1 /* player.swift */; };
 		07153D27278766150088B6B1 /* ent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07153D26278766150088B6B1 /* ent.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0701569527A166B600CDC54F /* statusService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statusService.swift; sourceTree = "<group>"; };
 		07153D20278700030088B6B1 /* shadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shadowButton.swift; sourceTree = "<group>"; };
 		07153D242787659D0088B6B1 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		07153D26278766150088B6B1 /* ent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ent.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		0700A6CD2781F5D20055B09F /* service */ = {
 			isa = PBXGroup;
 			children = (
+				0701569527A166B600CDC54F /* statusService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				078590D3278205E4002CF6B6 /* gameViewController.swift in Sources */,
 				078590D527820612002CF6B6 /* addPlayerViewController.swift in Sources */,
 				07FA5C132781D85000211316 /* AppDelegate.swift in Sources */,
+				0701569627A166B600CDC54F /* statusService.swift in Sources */,
 				078590D72782062B002CF6B6 /* resultViewController.swift in Sources */,
 				07153D252787659D0088B6B1 /* player.swift in Sources */,
 				078590D927820658002CF6B6 /* gameViewModel.swift in Sources */,
