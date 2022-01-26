@@ -5,4 +5,9 @@
 //  Created by Ilya Egorov on 02.01.2022.
 //
 
-import Foundation
+import UIKit
+
+final class gameViewController: UIViewController{
+    
+    let headerLabel = UILabel()
+}

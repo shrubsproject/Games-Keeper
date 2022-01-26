@@ -8,12 +8,11 @@
 import Foundation
 import UIKit
 
-class Coordin: dashboardViewModelCordinat, addPlayerViewModelCordinat {
+class Coordin {
     
     enum State{
         case initial
         case games
-        case 1
     }
     
     let window: UIWindow
@@ -21,6 +20,15 @@ class Coordin: dashboardViewModelCordinat, addPlayerViewModelCordinat {
     var modelNavigationViewController: UINavigationController?
     
     var state: Coordin.State = .initial
+    
+    let statusService = statusServis(key: "Party")
+    
+//    func start(){
+//        if let entity = statusService.loadEnt() {
+//            let GameViewController = self.gameViewController
+//            let GameViewModel = GameViewModel(
+//        }
+//    }
     
     var dashboardViewController: dashboardViewController{
         let dashboardViewController = shrubsProject.dashboardViewController()
@@ -36,6 +44,10 @@ class Coordin: dashboardViewModelCordinat, addPlayerViewModelCordinat {
         return AddPlayerViewController
     }
     
+    var GameViewController: gameViewController{
+        let GameViewController = gameViewController()
+        return GameViewController
+    }
     
     init (window: UIWindow){
         self.window = window
@@ -46,7 +58,7 @@ class Coordin: dashboardViewModelCordinat, addPlayerViewModelCordinat {
 
 extension Coordin: dashboardViewModelCordinat{
     func startGame(with players: [Player]) {
-        <#code#>
+        let GameViewController = self.GameViewController
     }
     
     func addPlayer(handler: @escaping ((String) -> Bool)) {

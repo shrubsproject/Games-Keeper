@@ -42,9 +42,6 @@ class dashboardViewModel {
         onPlayerDelete?(index)
     }
     
-    func copitsl()
-    }
-    
     init(coordinat: dashboardViewModelCordinat){
         self.coordinat = coordinat
     }

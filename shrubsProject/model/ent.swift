@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ent: Codable {
+struct Entity: Codable {
     
     let players: [Player]
 }
