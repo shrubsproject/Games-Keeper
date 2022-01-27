@@ -100,6 +100,20 @@ final class gameViewController: UIViewController{
     func configureLayout(){
         let multiplier: CGFloat = (view.safeAreaLayoutGuide.layoutFrame.height / Constants.verticalHeight)
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
+        diceButton.translatesAutoresizingMaskIntoConstraints = false
+        timerLabel.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        oneButton.translatesAutoresizingMaskIntoConstraints = false
+        playButton.translatesAutoresizingMaskIntoConstraints = false
+        buttons.forEach{
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+        diceView.translatesAutoresizingMaskIntoConstraints = false
+        leftButton.translatesAutoresizingMaskIntoConstraints = false
+        rightButton.translatesAutoresizingMaskIntoConstraints = false
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        userIndicator.translatesAutoresizingMaskIntoConstraints = false
         
     }
     
