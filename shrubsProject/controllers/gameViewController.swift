@@ -114,7 +114,16 @@ final class gameViewController: UIViewController{
         backButton.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
         userIndicator.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.spacing = (view.safeAreaLayoutGuide.layoutFrame.width - (Constants.stackViewButtonWidth * multiplier * 5) - 2 * Constants.horizontalOfSet) / 4
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
         
+        NSLayoutConstraint.activate([
+        
+            stackView.heightAnchor.constraint(equalToConstant: Constants.stackViewButtonWidth * multiplier),
+            
+        ])
     }
     
     @objc func addButtonTap(sender: UIButton){
