@@ -20,6 +20,9 @@
 		078590D927820658002CF6B6 /* gameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590D827820658002CF6B6 /* gameViewModel.swift */; };
 		078590DB27820669002CF6B6 /* addPlyaerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590DA27820669002CF6B6 /* addPlyaerViewModel.swift */; };
 		078590DD2782067C002CF6B6 /* resultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590DC2782067C002CF6B6 /* resultViewModel.swift */; };
+		07977A1F27A3C8950047E1E0 /* turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07977A1E27A3C8950047E1E0 /* turn.swift */; };
+		07977A2127A3CA840047E1E0 /* diceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07977A2027A3CA840047E1E0 /* diceView.swift */; };
+		07977A2327A3CAB50047E1E0 /* userIndecator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07977A2227A3CAB50047E1E0 /* userIndecator.swift */; };
 		0799E2842788749600C72A3C /* playerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799E2832788749600C72A3C /* playerTextField.swift */; };
 		07C708B027878C3400B9235B /* userCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C708AF27878C3400B9235B /* userCell.swift */; };
 		07FA5C132781D85000211316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FA5C122781D85000211316 /* AppDelegate.swift */; };
@@ -41,6 +44,9 @@
 		078590D827820658002CF6B6 /* gameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameViewModel.swift; sourceTree = "<group>"; };
 		078590DA27820669002CF6B6 /* addPlyaerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPlyaerViewModel.swift; sourceTree = "<group>"; };
 		078590DC2782067C002CF6B6 /* resultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewModel.swift; sourceTree = "<group>"; };
+		07977A1E27A3C8950047E1E0 /* turn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turn.swift; sourceTree = "<group>"; };
+		07977A2027A3CA840047E1E0 /* diceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diceView.swift; sourceTree = "<group>"; };
+		07977A2227A3CAB50047E1E0 /* userIndecator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userIndecator.swift; sourceTree = "<group>"; };
 		0799E2832788749600C72A3C /* playerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerTextField.swift; sourceTree = "<group>"; };
 		07C708AF27878C3400B9235B /* userCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userCell.swift; sourceTree = "<group>"; };
 		07FA5C0F2781D85000211316 /* shrubsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shrubsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +83,7 @@
 			children = (
 				07153D242787659D0088B6B1 /* player.swift */,
 				07153D26278766150088B6B1 /* ent.swift */,
+				07977A1E27A3C8950047E1E0 /* turn.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -117,6 +124,8 @@
 				07153D20278700030088B6B1 /* shadowButton.swift */,
 				07C708AF27878C3400B9235B /* userCell.swift */,
 				0799E2832788749600C72A3C /* playerTextField.swift */,
+				07977A2027A3CA840047E1E0 /* diceView.swift */,
+				07977A2227A3CAB50047E1E0 /* userIndecator.swift */,
 			);
 			path = "custom view";
 			sourceTree = "<group>";
@@ -230,12 +239,15 @@
 				078590D927820658002CF6B6 /* gameViewModel.swift in Sources */,
 				0727AAF12781F7E0007DA67E /* second.swift in Sources */,
 				07153D21278700030088B6B1 /* shadowButton.swift in Sources */,
+				07977A2327A3CAB50047E1E0 /* userIndecator.swift in Sources */,
+				07977A2127A3CA840047E1E0 /* diceView.swift in Sources */,
 				0799E2842788749600C72A3C /* playerTextField.swift in Sources */,
 				07153D27278766150088B6B1 /* ent.swift in Sources */,
 				078590DB27820669002CF6B6 /* addPlyaerViewModel.swift in Sources */,
 				078590CF2782056F002CF6B6 /* dashboardViewModel.swift in Sources */,
 				078590DD2782067C002CF6B6 /* resultViewModel.swift in Sources */,
 				07C708B027878C3400B9235B /* userCell.swift in Sources */,
+				07977A1F27A3C8950047E1E0 /* turn.swift in Sources */,
 				078590D1278205A2002CF6B6 /* dashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

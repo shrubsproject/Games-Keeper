@@ -10,4 +10,8 @@ import Foundation
 struct Entity: Codable {
     
     let players: [Player]
+    let turns: [Turn]
+    let timestamp: TimeInterval?
+    let stoppedTime: TimeInterval?
+    let currentIndex: Int
 }

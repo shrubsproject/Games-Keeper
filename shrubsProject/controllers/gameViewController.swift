@@ -120,10 +120,65 @@ final class gameViewController: UIViewController{
         stackView.distribution = .fillEqually
         
         NSLayoutConstraint.activate([
-        
+            
             stackView.heightAnchor.constraint(equalToConstant: Constants.stackViewButtonWidth * multiplier),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.horizontalOffset),
+            stackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            stackView.bottomAnchor.constraint(equalTo: backButton.topAnchor, constant: -Constants.stackViewBottomOffset * multiplier),
+            
+            diceButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -Constants.horizontalOffset),
+            diceButton.heightAnchor.constraint(equalToConstant: Constants.diceButtonWidth),
+            diceButton.widthAnchor.constraint(equalToConstant: Constants.diceButtonWidth),
+            diceButton.centerYAnchor.constraint(equalTo: headerLabel.centerYAnchor),
+            headerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constants.horizontalOffset),
+            headerLabel.heightAnchor.constraint(equalToConstant: Constants.headerLabelHeight),
+            
+            oneButton.widthAnchor.constraint(equalToConstant: Constants.oneButtonWidth * multiplier),
+            oneButton.heightAnchor.constraint(equalToConstant: Constants.oneButtonWidth * multiplier),
+            oneButton.bottomAnchor.constraint(equalTo: stackView.topAnchor, constant: -Constants.oneButtonVerticalOffset),
+            oneButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            
+            diceView.topAnchor.constraint(equalTo: view.topAnchor),
+            diceView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            diceView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            diceView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            backButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constants.backButtonOffset),
+            backButton.widthAnchor.constraint(equalToConstant: Constants.backButtonWidth),
+            backButton.heightAnchor.constraint(equalToConstant: Constants.backButtonHeight),
+            backButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -Constants.bottomOffset * multiplier),
+            
+            leftButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constants.arrowsOffset),
+            leftButton.heightAnchor.constraint(equalToConstant: Constants.diceButtonWidth),
+            leftButton.widthAnchor.constraint(equalToConstant: Constants.diceButtonWidth),
+            leftButton.centerYAnchor.constraint(equalTo: oneButton.centerYAnchor),
+            
+            rightButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -Constants.arrowsOffset),
+            rightButton.heightAnchor.constraint(equalToConstant: Constants.diceButtonWidth),
+            rightButton.widthAnchor.constraint(equalToConstant: Constants.diceButtonWidth),
+            rightButton.centerYAnchor.constraint(equalTo: oneButton.centerYAnchor),
+            
+            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            collectionView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            collectionView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: Constants.collectionViewWidthToHeightMultiplier),
+            collectionView.bottomAnchor.constraint(equalTo: oneButton.topAnchor, constant: -Constants.collectionViewBottomOffset * multiplier),
+            
+            timerLabel.bottomAnchor.constraint(equalTo: collectionView.topAnchor, constant: -Constants.timerInterSpacing * multiplier),
+            timerLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            playButton.centerYAnchor.constraint(equalTo: timerLabel.centerYAnchor),
+            playButton.leftAnchor.constraint(equalTo: timerLabel.rightAnchor, constant: Constants.horizontalOffset),
+            
+            userIndicator.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constants.userIndicatorOffset),
+            userIndicator.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            userIndicator.heightAnchor.constraint(equalToConstant: Constants.userIndicatorHeight),
+            userIndicator.lastBaselineAnchor.constraint(equalTo: backButton.lastBaselineAnchor)
             
         ])
+        
+        let collectionViewLayout = (collectionView.collectionViewLayout as! UICollectionViewFlowLayout)
+        collectionViewLayout.scrollDirection = .horizontal
+        collectionViewLayout.minimumLineSpacing = 20
     }
     
     @objc func addButtonTap(sender: UIButton){
@@ -199,6 +254,24 @@ final class gameViewController: UIViewController{
     }
     
     func startTimer(){
+        let timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateTimerLabel), userInfo: nil, repeats: true)
+
+        self.timer = timer
         
+        if self.startTimer != nil{
+            if let stopTime = self.stopTimer {
+                self.startTimer! += (Date.timeIntervalSinceReferenceDate - stopTime)
+            }
+            else {
+                return
+            }
+        }
+        else {
+            self.startTimer = Date.timeIntervalSinceReferenceDate
+            
+        }
+        self.stopTimer = nil
     }
+    
+    
 }
