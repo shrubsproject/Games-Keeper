@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setup()
         
         let coordin = Coordin(window: window)
-//        coordin.start()
+        coordin.start()
         
         window.makeKeyAndVisible()
         return true

@@ -23,12 +23,16 @@ class Coordin {
     
     let statusService = statusServis(key: "Party")
     
-//    func start(){
-//        if let entity = statusService.loadEnt() {
-//            let GameViewController = self.gameViewController
-//            let GameViewModel = GameViewModel(
-//        }
-//    }
+    func start(){
+        if let entity = statusService.loadEnt() {
+            let GameViewController = self.GameViewController
+            let GameViewModel = GameViewModel(entity: entity, coordin: self, statusService: self.statusService)
+            GameViewController.viewModel = GameViewModel
+            rootViewController.setViewControllers([GameViewController], animated: true)
+        }else{
+            rootViewController.setViewControllers([dashboardViewController], animated: true)
+        }
+    }
     
     var dashboardViewController: dashboardViewController{
         let dashboardViewController = shrubsProject.dashboardViewController()
@@ -58,7 +62,13 @@ class Coordin {
 
 extension Coordin: dashboardViewModelCordinat{
     func startGame(with players: [Player]) {
-        <#code#>
+        let gameViewController = self.GameViewController
+        gameViewController.viewModel = GameViewModel(players: players, coordin: self, statusService: self.statusService)
+        rootViewController.setViewControllers([gameViewController], animated: true)
+        if let modelNavigationController = modelNavigationViewController{
+            modelNavigationController.dismiss(animated: true, completion: nil)
+            self.modelNavigationViewController = nil
+        }
     }
     
     
@@ -81,5 +91,15 @@ extension Coordin: addPlayerViewModelCordinat{
         }else{
             rootViewController.popViewController(animated: true)
         }
+    }
+}
+
+extension Coordin: GameViewModelCoordinator{
+    func showResults(players: [Player], turns: [Turn]) {
+        <#code#>
+    }
+
+    func newGame() {
+        <#code#>
     }
 }

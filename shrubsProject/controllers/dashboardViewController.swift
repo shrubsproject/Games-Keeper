@@ -48,7 +48,7 @@ final class dashboardViewController: UIViewController {
         startGameButton.setTitle("start game", for: .normal)
         startGameButton.addTarget(self, action: #selector(start), for: .touchUpInside)
         startGameButton.isEnabled = false
-//        startGameButton.is
+        startGameButton.isShadow = true
         
         headerLabel.font = UIFont(name: "Zapf Dignbats", size: 30)
         headerLabel.text = "game counter"

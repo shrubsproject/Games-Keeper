@@ -23,6 +23,7 @@
 		07977A1F27A3C8950047E1E0 /* turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07977A1E27A3C8950047E1E0 /* turn.swift */; };
 		07977A2127A3CA840047E1E0 /* diceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07977A2027A3CA840047E1E0 /* diceView.swift */; };
 		07977A2327A3CAB50047E1E0 /* userIndecator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07977A2227A3CAB50047E1E0 /* userIndecator.swift */; };
+		07977A2527A3FA5B0047E1E0 /* carouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07977A2427A3FA5B0047E1E0 /* carouselCell.swift */; };
 		0799E2842788749600C72A3C /* playerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799E2832788749600C72A3C /* playerTextField.swift */; };
 		07C708B027878C3400B9235B /* userCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C708AF27878C3400B9235B /* userCell.swift */; };
 		07FA5C132781D85000211316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FA5C122781D85000211316 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		07977A1E27A3C8950047E1E0 /* turn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turn.swift; sourceTree = "<group>"; };
 		07977A2027A3CA840047E1E0 /* diceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diceView.swift; sourceTree = "<group>"; };
 		07977A2227A3CAB50047E1E0 /* userIndecator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userIndecator.swift; sourceTree = "<group>"; };
+		07977A2427A3FA5B0047E1E0 /* carouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carouselCell.swift; sourceTree = "<group>"; };
 		0799E2832788749600C72A3C /* playerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerTextField.swift; sourceTree = "<group>"; };
 		07C708AF27878C3400B9235B /* userCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userCell.swift; sourceTree = "<group>"; };
 		07FA5C0F2781D85000211316 /* shrubsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shrubsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 				0799E2832788749600C72A3C /* playerTextField.swift */,
 				07977A2027A3CA840047E1E0 /* diceView.swift */,
 				07977A2227A3CAB50047E1E0 /* userIndecator.swift */,
+				07977A2427A3FA5B0047E1E0 /* carouselCell.swift */,
 			);
 			path = "custom view";
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				07C708B027878C3400B9235B /* userCell.swift in Sources */,
 				07977A1F27A3C8950047E1E0 /* turn.swift in Sources */,
 				078590D1278205A2002CF6B6 /* dashboardViewController.swift in Sources */,
+				07977A2527A3FA5B0047E1E0 /* carouselCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
