@@ -38,8 +38,8 @@ final class dashboardViewController: UIViewController {
         view.addSubview(tableView)
         view.addSubview(headerLabel)
         
-        tableView.backgroundColor = UIColor.lightGray
-        view.backgroundColor = UIColor.gray
+        tableView.backgroundColor = UIColor(named: "Color-3")
+        view.backgroundColor = UIColor(named: "Color-3")
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.largeTitleDisplayMode = .never
         navigationController?.navigationBar.isTranslucent = false
