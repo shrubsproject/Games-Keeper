@@ -51,7 +51,7 @@ final class ResultViewController: UIViewController{
             headerLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constants.horizontalOfSet),
             headerLabel.heightAnchor.constraint(equalTo: Constants.headerLabelHeight),
             
-            scrollView.topAnchor.constraint(equalTo: <#T##NSLayoutAnchor<NSLayoutYAxisAnchor>#>)
+            scrollView.topAnchor.constraint(equalTo: )
         ])
     }
 }
