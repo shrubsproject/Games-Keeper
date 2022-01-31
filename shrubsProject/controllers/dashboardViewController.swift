@@ -45,13 +45,13 @@ final class dashboardViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = false
         
         startGameButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
-        startGameButton.setTitle("start game", for: .normal)
+        startGameButton.setTitle("Start game", for: .normal)
         startGameButton.addTarget(self, action: #selector(start), for: .touchUpInside)
         startGameButton.isEnabled = false
         startGameButton.isShadow = true
         
         headerLabel.font = UIFont.systemFont(ofSize: 40)
-        headerLabel.text = "game counter"
+        headerLabel.text = "Game counter"
         headerLabel.textColor = UIColor.white
         if let rootViewController = UIApplication.shared.delegate?.window??.rootViewController, rootViewController !== navigationController
         { navigationItem.leftBarButtonItem = UIBarButtonItem(title: "cancel", style: .plain, target: self, action: #selector(dismissView))
