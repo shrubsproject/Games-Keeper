@@ -12,6 +12,8 @@
 		07153D252787659D0088B6B1 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07153D242787659D0088B6B1 /* player.swift */; };
 		07153D27278766150088B6B1 /* ent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07153D26278766150088B6B1 /* ent.swift */; };
 		0727AAF12781F7E0007DA67E /* second.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0727AAF02781F7E0007DA67E /* second.swift */; };
+		0730E9E527A7DF7600E547A0 /* resultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730E9E427A7DF7600E547A0 /* resultCell.swift */; };
+		0730E9E727A7E12100E547A0 /* playerScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730E9E627A7E12100E547A0 /* playerScoreView.swift */; };
 		078590CF2782056F002CF6B6 /* dashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590CE2782056F002CF6B6 /* dashboardViewModel.swift */; };
 		078590D1278205A2002CF6B6 /* dashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590D0278205A2002CF6B6 /* dashboardViewController.swift */; };
 		078590D3278205E4002CF6B6 /* gameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078590D2278205E4002CF6B6 /* gameViewController.swift */; };
@@ -37,6 +39,8 @@
 		07153D242787659D0088B6B1 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		07153D26278766150088B6B1 /* ent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ent.swift; sourceTree = "<group>"; };
 		0727AAF02781F7E0007DA67E /* second.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = second.swift; sourceTree = "<group>"; };
+		0730E9E427A7DF7600E547A0 /* resultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultCell.swift; sourceTree = "<group>"; };
+		0730E9E627A7E12100E547A0 /* playerScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerScoreView.swift; sourceTree = "<group>"; };
 		078590CE2782056F002CF6B6 /* dashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardViewModel.swift; sourceTree = "<group>"; };
 		078590D0278205A2002CF6B6 /* dashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardViewController.swift; sourceTree = "<group>"; };
 		078590D2278205E4002CF6B6 /* gameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				07977A2027A3CA840047E1E0 /* diceView.swift */,
 				07977A2227A3CAB50047E1E0 /* userIndecator.swift */,
 				07977A2427A3FA5B0047E1E0 /* carouselCell.swift */,
+				0730E9E427A7DF7600E547A0 /* resultCell.swift */,
+				0730E9E627A7E12100E547A0 /* playerScoreView.swift */,
 			);
 			path = "custom view";
 			sourceTree = "<group>";
@@ -233,10 +239,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0730E9E727A7E12100E547A0 /* playerScoreView.swift in Sources */,
 				078590D3278205E4002CF6B6 /* gameViewController.swift in Sources */,
 				078590D527820612002CF6B6 /* addPlayerViewController.swift in Sources */,
 				07FA5C132781D85000211316 /* AppDelegate.swift in Sources */,
 				0701569627A166B600CDC54F /* statusService.swift in Sources */,
+				0730E9E527A7DF7600E547A0 /* resultCell.swift in Sources */,
 				078590D72782062B002CF6B6 /* resultViewController.swift in Sources */,
 				07153D252787659D0088B6B1 /* player.swift in Sources */,
 				078590D927820658002CF6B6 /* gameViewModel.swift in Sources */,

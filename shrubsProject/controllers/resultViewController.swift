@@ -17,7 +17,38 @@ final class ResultViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        confugureUI()
+        configureLayout()
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(ResultCell.self, forCellReuseIdentifier: "TurnID")
         
+        let stackView = UIStackView(arrangedSubviews: viewModel.scoreRank().map{ (Player, place) in
+            let view = PlayerScoreView(frame: .zero)
+            view.setupFromPlayer(player: Player, place: place)
+            return view
+        })
+        
+        stackView.axis = .vertical
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        stackView.spacing = 5
+        
+        scrollView.addSubview(stackView)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor)
+        ])
+        
+        stackView.arrangedSubviews.forEach{
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.heightAnchor.constraint(equalToConstant: 55).isActive = true
+            $0.widthAnchor.constraint(equalToConstant: view.safeAreaLayoutGuide.layoutFrame.width - Constants.horizontalOfSet * 2).isActive = true
+        }
     }
     
     func confugureUI(){
@@ -103,7 +134,21 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource{
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: Constants.cellHeight))
         view.backgroundColor = UIColor.gray
         
-        
+        let label = UILabel(frame: .zero)
+        label.text = "Turns"
+        label.font = UIFont(name: "...", size: 30)
+        label.textColor = UIColor.gray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(label)
+        NSLayoutConstraint.activate([
+            label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        Constants.cellHeight
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

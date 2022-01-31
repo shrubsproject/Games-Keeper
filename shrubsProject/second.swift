@@ -95,10 +95,29 @@ extension Coordin: addPlayerViewModelCordinat{
 
 extension Coordin: GameViewModelCoordinator{
     func showResults(players: [Player], turns: [Turn]) {
-        <#code#>
+        let resultViewController = ResultViewController()
+        let resultViewModel = ResultsViewModel(coordin: self, players: players, turns: turns)
+        resultViewController.viewModel = resultViewModel
+        rootViewController.pushViewController(resultViewController, animated: true)
     }
 
     func newGame() {
-        <#code#>
+        let dashboardViewController = self.dashboardViewController
+        let modelNavigationViewController = UINavigationController(rootViewController: dashboardViewController)
+        self.modelNavigationViewController = modelNavigationViewController
+        rootViewController.present(modelNavigationViewController, animated: true, completion: nil)
+    }
+}
+
+extension Coordin: ResultViewModelCoordin {
+    func newGameFromResults() {
+        let dashboardViewController = self.dashboardViewController
+        let modelNavigationViewController = UINavigationController(rootViewController: dashboardViewController)
+        self.modelNavigationViewController = modelNavigationViewController
+        rootViewController.present(modelNavigationViewController, animated: true, completion: nil)
+    }
+    
+    func resume() {
+        rootViewController.popViewController(animated: true)
     }
 }
