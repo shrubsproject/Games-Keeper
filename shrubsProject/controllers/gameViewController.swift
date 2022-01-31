@@ -41,14 +41,14 @@ final class gameViewController: UIViewController{
         
         viewModel.onNewTurn = {[unowned self] index in
             if index == 0{
-                leftButton.setImage(UIImage(named: "..."), for: .normal)
+                leftButton.setImage(UIImage(named: "er"), for: .normal)
             }else{
-                leftButton.setImage(UIImage(named: "..."), for: .normal)
+                leftButton.setImage(UIImage(named: "zx"), for: .normal)
             }
             if index == self.viewModel.players.count - 1{
-                rightButton.setImage(UIImage(named: "..."), for: .normal)
+                rightButton.setImage(UIImage(named: "qw"), for: .normal)
             }else{
-                rightButton.setImage(UIImage(named: "..."), for: .normal)
+                rightButton.setImage(UIImage(named: "as"), for: .normal)
             }
             self.userIndicator.activeIndex = index
             self.resetTimer()
@@ -71,10 +71,10 @@ final class gameViewController: UIViewController{
             self.startTimer()
         }
         
-        leftButton.setImage(UIImage(named: "..."), for: .normal)
+        leftButton.setImage(UIImage(named: "er"), for: .normal)
         
         if self.viewModel.currentPlayerIndex == self.viewModel.players.count - 1{
-            rightButton.setImage(UIImage(named: "..."), for: .normal)
+            rightButton.setImage(UIImage(named: "qw"), for: .normal)
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(save), name: UIApplication.willResignActiveNotification, object: nil)
@@ -132,10 +132,10 @@ final class gameViewController: UIViewController{
         diceView.isHidden = true
         diceView.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(hideDice)))
         
-        leftButton.setImage(UIImage(named: "..."), for: .normal)
+        leftButton.setImage(UIImage(named: "er"), for: .normal)
         leftButton.addTarget(self, action: #selector(prePlayer), for: .touchUpInside)
         
-        rightButton.setImage(UIImage(named: "..."), for: .normal)
+        rightButton.setImage(UIImage(named: "qw"), for: .normal)
         rightButton.addTarget(self, action: #selector(back), for: .touchUpInside)
         
         collectionView.backgroundColor = UIColor.blue
@@ -145,7 +145,7 @@ final class gameViewController: UIViewController{
         timerLabel.font = UIFont(name: "Zapf Dignbats", size: 30)
         timerLabel.textColor = UIColor.white
         
-        playButton.setImage(UIImage(named: "..."), for: .normal)
+        playButton.setImage(UIImage(named: "df"), for: .normal)
         playButton.addTarget(self, action: #selector(stopAndPlay), for: .touchUpInside)
     }
     
@@ -300,11 +300,11 @@ final class gameViewController: UIViewController{
     @objc func stopAndPlay(){
         if let timer = timer, timer.isValid {
             timerLabel.textColor = UIColor.gray
-            playButton.setImage(UIImage(named: "..."), for: .normal)
+            playButton.setImage(UIImage(named: "ty"), for: .normal)
             stopTimer()
         }else{
             timerLabel.textColor = UIColor.white
-            playButton.setImage(UIImage(named: "..."), for: .normal)
+            playButton.setImage(UIImage(named: "df"), for: .normal)
             startTimer()
         }
     }
