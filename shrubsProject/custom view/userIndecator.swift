@@ -44,7 +44,7 @@ class UserIndicator: UIScrollView {
             labels = .init()
             for charcter in newValue {
                 let label = UILabel(frame: .zero)
-                label.font = UIFont(name: "...", size: 30.0)
+                label.font = UIFont.systemFont(ofSize: 25)
                 label.textColor = UIColor.gray
                 label.text = charcter
                 stackView.addArrangedSubview(label)

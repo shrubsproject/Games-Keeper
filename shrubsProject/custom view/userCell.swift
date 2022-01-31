@@ -20,12 +20,12 @@ class userCell: UITableViewCell {
         willSet{
         if newValue == .user {
             imageView?.image = UIImage(named: "oi")
-            textLabel?.font = UIFont(name: "Nunito-ExtraBold", size: 20)
+            textLabel?.font = UIFont.systemFont(ofSize: 20)
             textLabel?.textColor = UIColor.white
         }
         else {
             imageView?.image = UIImage(named: "yu")
-            textLabel?.font = UIFont(name: "Nunito-SemiBold", size: 16)
+            textLabel?.font = UIFont.systemFont(ofSize: 16)
             textLabel?.text = "Add player"
             textLabel?.textColor = UIColor(named: "AppJade")
         }

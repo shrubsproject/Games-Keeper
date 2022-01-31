@@ -44,13 +44,13 @@ final class dashboardViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         navigationController?.navigationBar.isTranslucent = false
         
-        startGameButton.titleLabel?.font = UIFont(name: "Zapf Dignbats", size: 30)
+        startGameButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
         startGameButton.setTitle("start game", for: .normal)
         startGameButton.addTarget(self, action: #selector(start), for: .touchUpInside)
         startGameButton.isEnabled = false
         startGameButton.isShadow = true
         
-        headerLabel.font = UIFont(name: "Zapf Dignbats", size: 30)
+        headerLabel.font = UIFont.systemFont(ofSize: 40)
         headerLabel.text = "game counter"
         headerLabel.textColor = UIColor.white
         if let rootViewController = UIApplication.shared.delegate?.window??.rootViewController, rootViewController !== navigationController
@@ -146,7 +146,7 @@ extension dashboardViewController: UITableViewDelegate, UITableViewDataSource{
         
         let label = UILabel(frame: .zero)
         label.text = "Players"
-        label.font = UIFont(name: "Zapf Dignbats", size: 17)
+        label.font = UIFont.systemFont(ofSize: 17)
         label.textColor = UIColor.white
         label.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label)

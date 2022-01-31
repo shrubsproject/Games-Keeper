@@ -39,12 +39,12 @@ final class addPlayerViewController: UIViewController {
         
         view.backgroundColor = UIColor.white
         
-        headerLabel.font = UIFont(name: "Zapf Dignbats", size: 100)
+        headerLabel.font = UIFont.systemFont(ofSize: 40)
         headerLabel.text = "add player"
         headerLabel.textColor = UIColor.systemPink
         
         textField.tintColor = .white
-        textField.font = UIFont(name: "Zapf Dignbats", size: 30)
+        textField.font = UIFont.systemFont(ofSize: 30)
         textField.attributedPlaceholder = NSAttributedString(string: "player name", attributes: [.foregroundColor: UIColor.lightGray])
         textField.backgroundColor = UIColor.gray
         textField.textColor = UIColor.green

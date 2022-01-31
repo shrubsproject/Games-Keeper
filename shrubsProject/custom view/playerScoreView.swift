@@ -34,13 +34,13 @@ class PlayerScoreView: UIView {
         addSubview(nameLabel)
         addSubview(scoreLabel)
         
-        placeLabel.font = UIFont(name: "...", size: 30)
+        placeLabel.font = UIFont.systemFont(ofSize: 30)
         placeLabel.textColor = UIColor.white
         
-        nameLabel.font = UIFont(name: "...", size: 30)
+        nameLabel.font = UIFont.systemFont(ofSize: 30)
         nameLabel.textColor = UIColor.white
         
-        scoreLabel.font = UIFont(name: "...", size: 30)
+        scoreLabel.font = UIFont.systemFont(ofSize: 30)
         scoreLabel.textColor = UIColor.white
         
         placeLabel.translatesAutoresizingMaskIntoConstraints = false
