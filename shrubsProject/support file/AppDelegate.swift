@@ -28,16 +28,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setup(){
         let navigationBarAppearence = UINavigationBar.appearance()
-        navigationBarAppearence.largeTitleTextAttributes = [.font: UIFont(name: "Zapf Dignats", size: 30)!, .foregroundColor: UIColor.white]
+        navigationBarAppearence.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         navigationBarAppearence.barTintColor = UIColor.green
         navigationBarAppearence.backgroundColor = UIColor.gray
         navigationBarAppearence.setBackgroundImage(UIImage(), for: .default)
         navigationBarAppearence.shadowImage = UIImage()
         
         let barButtonItemAppearence = UIBarButtonItem.appearance()
-        barButtonItemAppearence.setTitleTextAttributes([.font: UIFont(name: "Zapf Dignbats", size: 30)!, .foregroundColor: UIColor.blue], for: .normal)
-        barButtonItemAppearence.setTitleTextAttributes([.font: UIFont(name: "Zapf Dignbats", size: 30)!, .foregroundColor: UIColor.white], for: .highlighted)
-        barButtonItemAppearence.setTitleTextAttributes([.font: UIFont(name: "Zapf Dignbats", size: 30)!], for: .disabled)
+        barButtonItemAppearence.setTitleTextAttributes([.foregroundColor: UIColor.blue], for: .normal)
+        barButtonItemAppearence.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .highlighted)
     }
 
 }
