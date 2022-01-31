@@ -101,14 +101,14 @@ final class gameViewController: UIViewController{
         view.addSubview(userIndicator)
         view.addSubview(diceView)
         
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(named: "Color-3")
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "New Game", style: .plain, target: self, action: #selector(newGame))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Results", style: .plain, target: self, action: #selector(showResults))
         
         headerLabel.text = "Game"
         headerLabel.font = UIFont(name: "Zapf Dignbats", size: 30)
-        headerLabel.textColor = UIColor.black
+        headerLabel.textColor = UIColor(named: "Color-3")
         
         buttons.forEach{
             stackView.addArrangedSubview($0)
@@ -138,7 +138,7 @@ final class gameViewController: UIViewController{
         rightButton.setImage(UIImage(named: "qw"), for: .normal)
         rightButton.addTarget(self, action: #selector(back), for: .touchUpInside)
         
-        collectionView.backgroundColor = UIColor.blue
+        collectionView.backgroundColor = UIColor(named: "Color")
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isPagingEnabled = false
         
@@ -299,7 +299,7 @@ final class gameViewController: UIViewController{
     
     @objc func stopAndPlay(){
         if let timer = timer, timer.isValid {
-            timerLabel.textColor = UIColor.gray
+            timerLabel.textColor = UIColor.white
             playButton.setImage(UIImage(named: "ty"), for: .normal)
             stopTimer()
         }else{

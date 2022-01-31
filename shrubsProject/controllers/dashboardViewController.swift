@@ -50,8 +50,8 @@ final class dashboardViewController: UIViewController {
         startGameButton.isEnabled = false
         startGameButton.isShadow = true
         
-        headerLabel.font = UIFont(name: "Zapf Dignbats", size: 30)
-        headerLabel.text = "game counter"
+        headerLabel.font = UIFont.systemFont(ofSize: 30)
+        headerLabel.text = "Game counter"
         headerLabel.textColor = UIColor.white
         if let rootViewController = UIApplication.shared.delegate?.window??.rootViewController, rootViewController !== navigationController
         { navigationItem.leftBarButtonItem = UIBarButtonItem(title: "cancel", style: .plain, target: self, action: #selector(dismissView))
@@ -132,7 +132,7 @@ extension dashboardViewController: UITableViewDelegate, UITableViewDataSource{
                 self.viewModel.deletePlayer(at: indexPatch.row)
             }
         }
-        cell.backgroundColor = UIColor.white
+        cell.backgroundColor = UIColor(named: "Color-1")
         return cell
     }
     
@@ -142,7 +142,7 @@ extension dashboardViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: Constants.cHeight))
-        view.backgroundColor = UIColor.systemPink
+        view.backgroundColor = UIColor(named: "Color-1")
         
         let label = UILabel(frame: .zero)
         label.text = "Players"
