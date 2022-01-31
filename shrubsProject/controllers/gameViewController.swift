@@ -340,6 +340,7 @@ final class gameViewController: UIViewController{
         timer?.invalidate()
     }
     
+
     @objc func updateTimerLabel(){
         guard let startTimer = StartTimer else { return }
         let currentTime = Date.timeIntervalSinceReferenceDate
