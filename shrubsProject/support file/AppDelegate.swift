@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setup(){
         let navigationBarAppearence = UINavigationBar.appearance()
-        navigationBarAppearence.largeTitleTextAttributes = [.font: UIFont(name: "Zapf Dignbats", size: 30)!, .foregroundColor: UIColor.white]
+        navigationBarAppearence.largeTitleTextAttributes = [.font: UIFont(name: "Zapf Dignats", size: 30)!, .foregroundColor: UIColor.white]
         navigationBarAppearence.barTintColor = UIColor.green
         navigationBarAppearence.backgroundColor = UIColor.gray
         navigationBarAppearence.setBackgroundImage(UIImage(), for: .default)
