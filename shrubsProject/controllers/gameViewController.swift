@@ -107,13 +107,12 @@ final class gameViewController: UIViewController{
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Results", style: .plain, target: self, action: #selector(showResults))
         
         headerLabel.text = "Game"
-        headerLabel.font = UIFont(name: "Zapf Dignbats", size: 30)
-        headerLabel.textColor = UIColor(named: "Color-3")
+        headerLabel.font = UIFont.systemFont(ofSize: 25)
+        headerLabel.textColor = UIColor.black
         
         buttons.forEach{
             stackView.addArrangedSubview($0)
-            $0.titleLabel?.font = UIFont(name: "Zapf Dignbats", size: 25)
-            $0.addTarget(self, action: #selector(addButtonTap(sender:)), for: .touchUpInside)
+            $0.titleLabel?.font = UIFont.systemFont(ofSize: 25);            $0.addTarget(self, action: #selector(addButtonTap(sender:)), for: .touchUpInside)
         }
         
         buttons[0].setTitle("-10", for: .normal)
@@ -122,7 +121,7 @@ final class gameViewController: UIViewController{
         buttons[3].setTitle("+5", for: .normal)
         buttons[4].setTitle("+10", for: .normal)
         
-        oneButton.titleLabel?.font = UIFont(name: "Zapf Dignbats", size: 30)
+        oneButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
         oneButton.setTitle("+1", for: .normal)
         oneButton.addTarget(self, action: #selector(addButtonTap(sender:)), for: .touchUpInside)
         
@@ -142,7 +141,7 @@ final class gameViewController: UIViewController{
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isPagingEnabled = false
         
-        timerLabel.font = UIFont(name: "Zapf Dignbats", size: 30)
+        timerLabel.font = UIFont.systemFont(ofSize: 30)
         timerLabel.textColor = UIColor.white
         
         playButton.setImage(UIImage(named: "df"), for: .normal)

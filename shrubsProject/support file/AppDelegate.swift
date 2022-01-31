@@ -8,6 +8,7 @@
 import UIKit
 
 @main
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -28,15 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setup(){
         let navigationBarAppearence = UINavigationBar.appearance()
-        navigationBarAppearence.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationBarAppearence.largeTitleTextAttributes = [.font: UIFont.systemFont(ofSize: 36), .foregroundColor: UIColor.white]
         navigationBarAppearence.barTintColor = UIColor.green
         navigationBarAppearence.backgroundColor = UIColor.gray
         navigationBarAppearence.setBackgroundImage(UIImage(), for: .default)
         navigationBarAppearence.shadowImage = UIImage()
         
         let barButtonItemAppearence = UIBarButtonItem.appearance()
-        barButtonItemAppearence.setTitleTextAttributes([.foregroundColor: UIColor.blue], for: .normal)
-        barButtonItemAppearence.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .highlighted)
+        barButtonItemAppearence.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 17), .foregroundColor: UIColor.blue], for: .normal)
+        barButtonItemAppearence.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 17), .foregroundColor: UIColor.white], for: .highlighted)
     }
 
 }

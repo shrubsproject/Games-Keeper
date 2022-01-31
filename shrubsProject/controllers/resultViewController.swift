@@ -62,7 +62,7 @@ final class ResultViewController: UIViewController{
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Resume", style: .plain, target: self, action: #selector(resume))
         
         headerLabel.text = "Results"
-        headerLabel.font = UIFont(name: "...", size: 30.0)
+        headerLabel.font = UIFont.systemFont(ofSize: 30)
         headerLabel.textColor = UIColor.white
         
         tableView.layer.cornerRadius = 15.0
@@ -109,12 +109,12 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource{
         cell.backgroundColor = UIColor(named: "Color-3")
         
         cell.textLabel?.text = viewModel.turns[indexPath.row].player
-        cell.textLabel?.font = UIFont(name: "...", size: 30)
-        cell.textLabel?.textColor = UIColor(named: "Color")
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 30)
+        cell.textLabel?.textColor = .white
         
         let rightLabel = cell.detailTextLabel!
-        rightLabel.font = UIFont(name: "...", size: 30)
-        rightLabel.textColor = UIColor(named: "Color")
+        rightLabel.font = UIFont.systemFont(ofSize: 30)
+        rightLabel.textColor = .white
         
         let score = viewModel.turns[indexPath.row].scoreChange
         let string = score > 0 ? "+\(score)" : "\(score)"
@@ -136,7 +136,7 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource{
         
         let label = UILabel(frame: .zero)
         label.text = "Turns"
-        label.font = UIFont(name: "...", size: 30)
+        label.font = UIFont.systemFont(ofSize: 30)
         label.textColor = UIColor.gray
         label.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label)
