@@ -24,30 +24,30 @@ final class addPlayerViewController: UIViewController {
     
     func neprostoUI(){
         
-        textField.layer.cornerRadius = 15
+        textField.layer.cornerRadius = 0
         
         view.addSubview(headerLabel)
         view.addSubview(textField)
         
         navigationItem.largeTitleDisplayMode = .never
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "back", style: .plain, target: self, action: #selector(goBack))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBack))
         navigationItem.backBarButtonItem = nil
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "add", style: .plain, target: self, action: #selector(plusPlayer))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(plusPlayer))
         navigationItem.rightBarButtonItem?.isEnabled = false
         
         view.backgroundColor = UIColor(named: "Color-3")
         
-        headerLabel.font = UIFont.systemFont(ofSize: 40)
-        headerLabel.text = "add player"
-        headerLabel.textColor = UIColor(named: "Color-1")
+        headerLabel.font = UIFont(name: "Charter", size: 36)
+        headerLabel.text = "Add player"
+        headerLabel.textColor = UIColor.white
         
         textField.tintColor = .white
-        textField.font = UIFont.systemFont(ofSize: 30)
-        textField.attributedPlaceholder = NSAttributedString(string: "player name", attributes: [.foregroundColor: UIColor.lightGray])
-        textField.backgroundColor = UIColor.gray
-        textField.textColor = UIColor(named: "Color-1")
+        textField.font = UIFont(name: "Charter", size: 20)
+        textField.attributedPlaceholder = NSAttributedString(string: "Player name", attributes: [.foregroundColor: UIColor.lightGray])
+        textField.backgroundColor = UIColor(named: "Color-1")
+        textField.textColor = UIColor.white
     }
     
     func configuredLayout() {
@@ -97,9 +97,9 @@ final class addPlayerViewController: UIViewController {
 extension addPlayerViewController{
     enum Constantsy{
         static let leadingHeaderLabel: CGFloat = 25.0
-        static let leadingTextField: CGFloat = 25.0
-        static let heightHeaderLabel: CGFloat = 55.0
-        static let heightTextField: CGFloat = 40.0
+        static let leadingTextField: CGFloat = 0.0
+        static let heightHeaderLabel: CGFloat = 49.0
+        static let heightTextField: CGFloat = 60.0
         static let topTextField: CGFloat = 80.0
     }
 }

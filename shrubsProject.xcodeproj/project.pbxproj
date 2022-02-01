@@ -31,6 +31,7 @@
 		07FA5C132781D85000211316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FA5C122781D85000211316 /* AppDelegate.swift */; };
 		07FA5C1C2781D85200211316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07FA5C1B2781D85200211316 /* Assets.xcassets */; };
 		07FA5C1F2781D85200211316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07FA5C1D2781D85200211316 /* LaunchScreen.storyboard */; };
+		91112F1427A9314700517993 /* NunitoExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91112F1327A9314700517993 /* NunitoExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		07FA5C1B2781D85200211316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07FA5C1E2781D85200211316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07FA5C202781D85200211316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91112F1327A9314700517993 /* NunitoExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NunitoExtraBold.ttf; path = ../../../../../Downloads/Nunito/static/NunitoExtraBold.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		0700A6C92781F5A90055B09F /* support file */ = {
 			isa = PBXGroup;
 			children = (
+				91112F1227A9310A00517993 /* Fonts */,
 				07FA5C122781D85000211316 /* AppDelegate.swift */,
 				07FA5C1B2781D85200211316 /* Assets.xcassets */,
 				07FA5C1D2781D85200211316 /* LaunchScreen.storyboard */,
@@ -169,6 +172,14 @@
 			path = shrubsProject;
 			sourceTree = "<group>";
 		};
+		91112F1227A9310A00517993 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				91112F1327A9314700517993 /* NunitoExtraBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91112F1427A9314700517993 /* NunitoExtraBold.ttf in Resources */,
 				07FA5C1F2781D85200211316 /* LaunchScreen.storyboard in Resources */,
 				07FA5C1C2781D85200211316 /* Assets.xcassets in Resources */,
 			);

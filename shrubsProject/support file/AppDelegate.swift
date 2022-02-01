@@ -29,15 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setup(){
         let navigationBarAppearence = UINavigationBar.appearance()
-        navigationBarAppearence.largeTitleTextAttributes = [.font: UIFont.systemFont(ofSize: 36), .foregroundColor: UIColor.white]
-        navigationBarAppearence.barTintColor = UIColor.green
-        navigationBarAppearence.backgroundColor = UIColor.gray
+        navigationBarAppearence.largeTitleTextAttributes = [.font: UIFont(name: "Charter", size: 36), .foregroundColor: UIColor.white]
+        navigationBarAppearence.barTintColor = UIColor.white
+        navigationBarAppearence.backgroundColor = UIColor(named: "Color-3")
         navigationBarAppearence.setBackgroundImage(UIImage(), for: .default)
         navigationBarAppearence.shadowImage = UIImage()
         
         let barButtonItemAppearence = UIBarButtonItem.appearance()
-        barButtonItemAppearence.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 17), .foregroundColor: UIColor.blue], for: .normal)
-        barButtonItemAppearence.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 17), .foregroundColor: UIColor.white], for: .highlighted)
+        barButtonItemAppearence.setTitleTextAttributes([.font: UIFont(name: "Charter", size: 17), .foregroundColor: UIColor(named: "Color")], for: .normal)
+        barButtonItemAppearence.setTitleTextAttributes([.font: UIFont(name: "Charter", size: 17), .foregroundColor: UIColor(named: "Color")], for: .highlighted)
     }
 
 }

@@ -13,7 +13,7 @@ class carouselCell: UICollectionViewCell{
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = UIFont(name: "Charter", size: 30)
         label.textColor = UIColor.brown
         
         return label
@@ -22,7 +22,7 @@ class carouselCell: UICollectionViewCell{
     let scoreLabel: UILabel = {
         
         let label  = UILabel()
-        label.font = UIFont.systemFont(ofSize: 20)
+        label.font = UIFont(name: "Charter", size: 20)
         label.textColor = UIColor.purple
         return label
     }()

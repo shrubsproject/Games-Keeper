@@ -49,7 +49,8 @@ class ShadowButton: UIButton {
         layer.masksToBounds = false
         titleLabel?.layer.masksToBounds = false
         
-        backgroundColor = UIColor.lightGray
+        backgroundColor = UIColor(named: "Color")
+        
         
         setTitleColor(.white, for: .normal)
         setTitleColor(UIColor.white.withAlphaComponent(0.5), for: .highlighted)

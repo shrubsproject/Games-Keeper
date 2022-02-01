@@ -44,17 +44,17 @@ final class dashboardViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         navigationController?.navigationBar.isTranslucent = false
         
-        startGameButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        startGameButton.titleLabel?.font = UIFont(name: "Charter", size: 30)
         startGameButton.setTitle("Start game", for: .normal)
         startGameButton.addTarget(self, action: #selector(start), for: .touchUpInside)
         startGameButton.isEnabled = false
         startGameButton.isShadow = true
         
-        headerLabel.font = UIFont.systemFont(ofSize: 40)
+        headerLabel.font = UIFont(name: "Charter", size: 40)
         headerLabel.text = "Game counter"
         headerLabel.textColor = UIColor.white
         if let rootViewController = UIApplication.shared.delegate?.window??.rootViewController, rootViewController !== navigationController
-        { navigationItem.leftBarButtonItem = UIBarButtonItem(title: "cancel", style: .plain, target: self, action: #selector(dismissView))
+        { navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(dismissView))
         }
         
     }
@@ -146,7 +146,7 @@ extension dashboardViewController: UITableViewDelegate, UITableViewDataSource{
         
         let label = UILabel(frame: .zero)
         label.text = "Players"
-        label.font = UIFont.systemFont(ofSize: 17)
+        label.font = UIFont(name: "Charter", size: 15)
         label.textColor = UIColor.white
         label.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label)
@@ -170,6 +170,6 @@ extension dashboardViewController{
         static let tableViewOfSet: CGFloat = 20.0
         static let headerLabelHeight: CGFloat = 40.0
         static let tableViewOfSetLim: CGFloat = headerLabelHeight + startGameButtonOfSet + tableViewOfSet + 10.0
-        static let cHeight: CGFloat = 50.0
+        static let cHeight: CGFloat = 47.0
     }
 }
