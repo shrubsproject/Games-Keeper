@@ -126,19 +126,22 @@ final class gameViewController: UIViewController{
         oneButton.setTitle("+1", for: .normal)
         oneButton.addTarget(self, action: #selector(addButtonTap(sender:)), for: .touchUpInside)
         
-        diceButton.setImage(UIImage(named: "Four"), for: .normal)
+        diceButton.setImage(UIImage(named: "dice-4"), for: .normal)
         diceButton.addTarget(self, action: #selector(showDice), for: .touchUpInside)
         
         diceView.isHidden = true
         diceView.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(hideDice)))
         
+        backButton.setImage(UIImage(named: "cv"), for: .normal)
+        backButton.addTarget(self, action: #selector(back), for: .touchUpInside)
+        
         leftButton.setImage(UIImage(named: "er"), for: .normal)
         leftButton.addTarget(self, action: #selector(prePlayer), for: .touchUpInside)
         
         rightButton.setImage(UIImage(named: "qw"), for: .normal)
-        rightButton.addTarget(self, action: #selector(back), for: .touchUpInside)
+        rightButton.addTarget(self, action: #selector(nextPlayer), for: .touchUpInside)
         
-        collectionView.backgroundColor = UIColor(named: "Color")
+        collectionView.backgroundColor = UIColor(named: "Color-3")
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isPagingEnabled = false
         
@@ -246,10 +249,10 @@ final class gameViewController: UIViewController{
         if sender == buttons[2]{
             viewModel.add(score: -1)
         }
-        if sender == buttons[0]{
+        if sender == buttons[3]{
             viewModel.add(score: 5)
         }
-        if sender == buttons[0]{
+        if sender == buttons[4]{
             viewModel.add(score: 10)
         }
         collectionView.reloadItems(at: [IndexPath(item: viewModel.currentPlayerIndex, section: 0)])
@@ -369,25 +372,25 @@ final class gameViewController: UIViewController{
 
 extension gameViewController{
     enum Constants{
-        static let verticalHeight: CGFloat = 42.0
-        static let stackViewButtonWidth: CGFloat = 50.0
+        static let verticalHeight: CGFloat = 768.0
+        static let stackViewButtonWidth: CGFloat = 55.0
         static let horizontalOfSet: CGFloat = 20.0
-        static let stackViewBottomOffset: CGFloat = 45.0
+        static let stackViewBottomOffset: CGFloat = 22.0
         static let diceButtonWidth: CGFloat = 30.0
-        static let oneButtonWidth: CGFloat = 30.0
-        static let backButtonWidth: CGFloat = 15.0
-        static let backButtonOffset: CGFloat = 42.0
-        static let oneButtonVerticalOffset: CGFloat = 20.0
+        static let oneButtonWidth: CGFloat = 90.0
+        static let backButtonWidth: CGFloat = 30.0
+        static let backButtonOffset: CGFloat = 40.0
+        static let oneButtonVerticalOffset: CGFloat = 22.0
         static let bottomOffset: CGFloat = 30.0
         static let backButtonHeight: CGFloat = 20.0
-        static let arrowsOffset: CGFloat = 42.0
+        static let arrowsOffset: CGFloat = 45.0
         static let collectionViewCellHeightToWightAspectRatio: CGFloat = 300.0/255.0
-        static let collectionViewCellWightAspectRatio: CGFloat = 255.0/350.0
+        static let collectionViewCellWightAspectRatio: CGFloat = 255.0/375.0
         static let collectionViewWidthToHeightMultiplier: CGFloat = collectionViewCellWightAspectRatio * collectionViewCellHeightToWightAspectRatio
-        static let collectionViewBottomOffset: CGFloat = 25.0
-        static let timerInterSpacing: CGFloat = 42.0
-        static let userIndicatorOfset: CGFloat = 42.0
-        static let userIndicatorHeight: CGFloat = 42.0
+        static let collectionViewBottomOffset: CGFloat = 28.0
+        static let timerInterSpacing: CGFloat = 30.0
+        static let userIndicatorOfset: CGFloat = 70.0
+        static let userIndicatorHeight: CGFloat = 30.0
         static let headerLabelHeight: CGFloat = 42.0
     }
 }

@@ -30,9 +30,6 @@ final class dashboardViewController: UIViewController {
     func prostoUI() {
         
         tableView.layer.cornerRadius = 15
-        tableView.separatorColor = UIColor.white
-        tableView.separatorStyle = .singleLine
-        tableView.allowsSelection = false
         
         view.addSubview(startGameButton)
         view.addSubview(tableView)
@@ -44,13 +41,19 @@ final class dashboardViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         navigationController?.navigationBar.isTranslucent = false
         
-        startGameButton.titleLabel?.font = UIFont(name: "Charter", size: 30)
+        startGameButton.titleLabel?.font = UIFont(name: "Charter", size: 24)
         startGameButton.setTitle("Start game", for: .normal)
         startGameButton.addTarget(self, action: #selector(start), for: .touchUpInside)
-        startGameButton.isEnabled = false
-        startGameButton.isShadow = true
         
-        headerLabel.font = UIFont(name: "Charter", size: 40)
+        startGameButton.isShadow = true
+        startGameButton.isEnabled = false
+        
+        
+        tableView.separatorColor = UIColor(red: 0.333, green: 0.333, blue: 0.333, alpha: 1)
+        tableView.separatorStyle = .singleLine
+        tableView.allowsSelection = false
+        
+        headerLabel.font = UIFont(name: "Charter", size: 36.0)
         headerLabel.text = "Game counter"
         headerLabel.textColor = UIColor.white
         if let rootViewController = UIApplication.shared.delegate?.window??.rootViewController, rootViewController !== navigationController
@@ -146,8 +149,8 @@ extension dashboardViewController: UITableViewDelegate, UITableViewDataSource{
         
         let label = UILabel(frame: .zero)
         label.text = "Players"
-        label.font = UIFont(name: "Charter", size: 15)
-        label.textColor = UIColor.white
+        label.font = UIFont(name: "Charter", size: 16)
+        label.textColor = UIColor(red: 0.922, green: 0.922, blue: 0.961, alpha: 0.6)
         label.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label)
         NSLayoutConstraint.activate([
@@ -158,19 +161,24 @@ extension dashboardViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        Constants.cHeight
+        Constants.aHeight
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+    
 }
 
 extension dashboardViewController{
     enum Constants{
-        static let startGameButtonOfSet: CGFloat = 50.0
+        static let startGameButtonOfSet: CGFloat = 65.0
         static let leadingOfSet: CGFloat = 20.0
-        static let startButtonHeight: CGFloat = 55.0
-        static let tableViewOfSet: CGFloat = 20.0
+        static let startButtonHeight: CGFloat = 65.0
+        static let tableViewOfSet: CGFloat = 25.0
         static let headerLabelHeight: CGFloat = 40.0
-        static let tableViewOfSetLim: CGFloat = headerLabelHeight + startGameButtonOfSet + tableViewOfSet + 10.0
-        static let cHeight: CGFloat = 47.0
-        static let aHeight: CGFloat = 39.0
+        static let tableViewOfSetLim: CGFloat = headerLabelHeight + startButtonHeight + startGameButtonOfSet + tableViewOfSet + 20.0
+        static let cHeight: CGFloat = 55.0
+        static let aHeight: CGFloat = 55.0
     }
 }

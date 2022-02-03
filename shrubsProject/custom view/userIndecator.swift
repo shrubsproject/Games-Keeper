@@ -25,8 +25,8 @@ class UserIndicator: UIScrollView {
     
     private var index: Int = 0{
         willSet{
-            labels[index].textColor = UIColor.gray
-            labels[newValue].textColor = UIColor.white
+            labels[index].textColor = UIColor(named: "Color-1")
+            labels[newValue].textColor = .white
             focus(at: newValue)
         }
     }
@@ -45,7 +45,7 @@ class UserIndicator: UIScrollView {
             for charcter in newValue {
                 let label = UILabel(frame: .zero)
                 label.font = UIFont(name: "Charter", size: 25)
-                label.textColor = UIColor.gray
+                label.textColor = UIColor(named: "Color-2")
                 label.text = charcter
                 stackView.addArrangedSubview(label)
                 labels.append(label)

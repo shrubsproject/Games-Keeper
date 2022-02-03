@@ -23,10 +23,10 @@ class PlayerScoreView: UIView {
         commonInit()
     }
     
-    func setupFromPlayer(player: Player, place: Int) {
+    func setupFromPlayer(players: Player, place: Int) {
         self.placeLabel.text = "#\(place)"
-        self.nameLabel.text = player.name
-        self.scoreLabel.text = "\(player.score)"
+        self.nameLabel.text = "\(players.name)"
+        self.scoreLabel.text = "\(players.score)"
     }
     
     func commonInit(){
@@ -34,13 +34,13 @@ class PlayerScoreView: UIView {
         addSubview(nameLabel)
         addSubview(scoreLabel)
         
-        placeLabel.font = UIFont(name: "Charter", size: 30)
+        placeLabel.font = UIFont(name: "Charter", size: 28)
         placeLabel.textColor = UIColor.white
         
-        nameLabel.font = UIFont(name: "Charter", size: 30)
-        nameLabel.textColor = UIColor.white
+        nameLabel.font = UIFont(name: "Charter", size: 28)
+        nameLabel.textColor = UIColor(named: "Color-2")
         
-        scoreLabel.font = UIFont(name: "Charter", size: 30)
+        scoreLabel.font = UIFont(name: "Charter", size: 28)
         scoreLabel.textColor = UIColor.white
         
         placeLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -52,8 +52,9 @@ class PlayerScoreView: UIView {
             placeLabel.leftAnchor.constraint(equalTo: leftAnchor),
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             nameLabel.leftAnchor.constraint(equalTo: placeLabel.rightAnchor),
-            scoreLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            scoreLabel.leftAnchor.constraint(equalTo: rightAnchor, constant: -10.0)
+            scoreLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            scoreLabel.leftAnchor.constraint(equalTo: rightAnchor, constant: -40.0)
         ])
     }
 }
+

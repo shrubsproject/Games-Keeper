@@ -58,8 +58,8 @@ final class addPlayerViewController: UIViewController {
             headerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             headerLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constantsy.leadingHeaderLabel),
             headerLabel.heightAnchor.constraint(equalToConstant: Constantsy.heightHeaderLabel),
-            textField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Constantsy.topTextField),
-            textField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constantsy.leadingTextField),
+            textField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            textField.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: Constantsy.topTextField),
             textField.heightAnchor.constraint(equalToConstant: Constantsy.heightTextField),
             textField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)])
     }
@@ -96,10 +96,9 @@ final class addPlayerViewController: UIViewController {
 
 extension addPlayerViewController{
     enum Constantsy{
-        static let leadingHeaderLabel: CGFloat = 25.0
-        static let leadingTextField: CGFloat = 0.0
-        static let heightHeaderLabel: CGFloat = 49.0
+        static let leadingHeaderLabel: CGFloat = 20.0
+        static let heightHeaderLabel: CGFloat = 42.0
         static let heightTextField: CGFloat = 60.0
-        static let topTextField: CGFloat = 80.0
+        static let topTextField: CGFloat = 5.0
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class playerTextField: UITextField {
     
-    private let edgeInsets = UIEdgeInsets(top: 20, left: 25, bottom: 15, right: 25)
+    private let edgeInsets = UIEdgeInsets(top: 18, left: 24, bottom: 18, right: 24)
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: edgeInsets)

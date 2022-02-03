@@ -25,7 +25,7 @@ final class ResultViewController: UIViewController{
         
         let stackView = UIStackView(arrangedSubviews: viewModel.scoreRank().map{ (Player, place) in
             let view = PlayerScoreView(frame: .zero)
-            view.setupFromPlayer(player: Player, place: place)
+            view.setupFromPlayer(players: Player, place: place)
             return view
         })
         
@@ -56,19 +56,19 @@ final class ResultViewController: UIViewController{
         view.addSubview(tableView)
         view.addSubview(headerLabel)
         
-        view.backgroundColor = UIColor.gray
+        view.backgroundColor = UIColor(named: "Color-3")
         navigationItem.backBarButtonItem = nil
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "New Game", style: .plain, target: self, action: #selector(newGame))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Resume", style: .plain, target: self, action: #selector(resume))
         
         headerLabel.text = "Results"
-        headerLabel.font = UIFont(name: "Charter", size: 30)
+        headerLabel.font = UIFont(name: "Charter", size: 36)
         headerLabel.textColor = UIColor.white
         
         tableView.layer.cornerRadius = 15.0
         tableView.separatorStyle = .singleLine
-        tableView.separatorColor = UIColor.white
-        tableView.backgroundColor = UIColor.lightGray
+        tableView.separatorColor = UIColor(red: 0.333, green: 0.333, blue: 0.333, alpha: 1)
+        tableView.backgroundColor = UIColor(named: "Color-1")
     }
     
     func configureLayout(){
@@ -78,7 +78,7 @@ final class ResultViewController: UIViewController{
         
         let viewHieght = view.safeAreaLayoutGuide.layoutFrame.height
         NSLayoutConstraint.activate([
-            headerLabel.topAnchor.constraint(equalTo: headerLabel.topAnchor),
+            headerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             headerLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constants.horizontalOfSet),
             headerLabel.heightAnchor.constraint(equalToConstant: Constants.headerLabelHeight),
             
@@ -106,14 +106,14 @@ final class ResultViewController: UIViewController{
 extension ResultViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TurnID", for: indexPath)
-        cell.backgroundColor = UIColor(named: "Color-3")
+        cell.backgroundColor = UIColor(named: "Color-1")
         
         cell.textLabel?.text = viewModel.turns[indexPath.row].player
-        cell.textLabel?.font = UIFont(name: "Charter", size: 30)
+        cell.textLabel?.font = UIFont(name: "Charter", size: 20)
         cell.textLabel?.textColor = .white
         
         let rightLabel = cell.detailTextLabel!
-        rightLabel.font = UIFont.systemFont(ofSize: 30)
+        rightLabel.font = UIFont.systemFont(ofSize: 20)
         rightLabel.textColor = .white
         
         let score = viewModel.turns[indexPath.row].scoreChange
@@ -132,12 +132,12 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: Constants.cellHeight))
-        view.backgroundColor = UIColor.gray
+        view.backgroundColor = UIColor(named: "Color-1")
         
         let label = UILabel(frame: .zero)
         label.text = "Turns"
-        label.font = UIFont(name: "Charter", size: 30)
-        label.textColor = UIColor.gray
+        label.font = UIFont(name: "Charter", size: 16)
+        label.textColor = UIColor(red: 0.922, green: 0.922, blue: 0.961, alpha: 0.6)
         label.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label)
         NSLayoutConstraint.activate([
@@ -160,8 +160,8 @@ extension ResultViewController{
     enum Constants{
         static let headerLabelHeight: CGFloat = 42
         static let horizontalOfSet: CGFloat = 20
-        static let spacingRatio: CGFloat = 0.03
-        static let scrollViewRatio: CGFloat = 0.2
+        static let spacingRatio: CGFloat = 0.033
+        static let scrollViewRatio: CGFloat = 0.25
         static let cellHeight: CGFloat = 50.0
     }
 }
