@@ -38,7 +38,7 @@ final class dashboardViewController: UIViewController {
         view.addSubview(tableView)
         view.addSubview(headerLabel)
         
-        tableView.backgroundColor = UIColor(named: "Color-3")
+        tableView.backgroundColor = UIColor(named: "Color-1")
         view.backgroundColor = UIColor(named: "Color-3")
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.largeTitleDisplayMode = .never
@@ -137,11 +137,11 @@ extension dashboardViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
      func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        Constants.cHeight
+        Constants.aHeight
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: Constants.cHeight))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: Constants.aHeight))
         view.backgroundColor = UIColor(named: "Color-1")
         
         let label = UILabel(frame: .zero)
@@ -171,5 +171,6 @@ extension dashboardViewController{
         static let headerLabelHeight: CGFloat = 40.0
         static let tableViewOfSetLim: CGFloat = headerLabelHeight + startGameButtonOfSet + tableViewOfSet + 10.0
         static let cHeight: CGFloat = 47.0
+        static let aHeight: CGFloat = 39.0
     }
 }
