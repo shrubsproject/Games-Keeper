@@ -35,7 +35,7 @@ class carouselCell: UICollectionViewCell{
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: contentView.frame.height/4.5),
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: contentView.frame.height/7),
             nameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             scoreLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             scoreLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
