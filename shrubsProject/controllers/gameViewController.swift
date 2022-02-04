@@ -130,7 +130,7 @@ final class gameViewController: UIViewController{
         diceButton.addTarget(self, action: #selector(showDice), for: .touchUpInside)
         
         diceView.isHidden = true
-        diceView.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(hideDice)))
+        diceView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideDice)))
         
         backButton.setImage(UIImage(named: "cv"), for: .normal)
         backButton.addTarget(self, action: #selector(back), for: .touchUpInside)
@@ -185,6 +185,7 @@ final class gameViewController: UIViewController{
             diceButton.heightAnchor.constraint(equalToConstant: Constants.diceButtonWidth),
             diceButton.widthAnchor.constraint(equalToConstant: Constants.diceButtonWidth),
             diceButton.centerYAnchor.constraint(equalTo: headerLabel.centerYAnchor),
+            
             headerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             headerLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constants.horizontalOfSet),
             headerLabel.heightAnchor.constraint(equalToConstant: Constants.headerLabelHeight),
@@ -217,10 +218,11 @@ final class gameViewController: UIViewController{
             collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             collectionView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             collectionView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: Constants.collectionViewWidthToHeightMultiplier),
-            collectionView.bottomAnchor.constraint(equalTo: oneButton.topAnchor, constant: -Constants.collectionViewBottomOffset * multiplier),
+            collectionView.bottomAnchor.constraint(equalTo: oneButton.topAnchor, constant: Constants.collectionViewBottomOffset * multiplier),
             
-            timerLabel.bottomAnchor.constraint(equalTo: collectionView.topAnchor, constant: -Constants.timerInterSpacing * multiplier),
+            timerLabel.bottomAnchor.constraint(equalTo: oneButton.topAnchor, constant: -Constants.timerInterSpacing * multiplier),
             timerLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            
             playButton.centerYAnchor.constraint(equalTo: timerLabel.centerYAnchor),
             playButton.leftAnchor.constraint(equalTo: timerLabel.rightAnchor, constant: Constants.horizontalOfSet),
             
@@ -377,18 +379,18 @@ extension gameViewController{
         static let horizontalOfSet: CGFloat = 20.0
         static let stackViewBottomOffset: CGFloat = 22.0
         static let diceButtonWidth: CGFloat = 30.0
-        static let oneButtonWidth: CGFloat = 90.0
+        static let oneButtonWidth: CGFloat = 80.0
         static let backButtonWidth: CGFloat = 30.0
         static let backButtonOffset: CGFloat = 40.0
         static let oneButtonVerticalOffset: CGFloat = 22.0
         static let bottomOffset: CGFloat = 30.0
         static let backButtonHeight: CGFloat = 20.0
         static let arrowsOffset: CGFloat = 45.0
-        static let collectionViewCellHeightToWightAspectRatio: CGFloat = 300.0/255.0
+        static let collectionViewCellHeightToWightAspectRatio: CGFloat = 215.0/255.0
         static let collectionViewCellWightAspectRatio: CGFloat = 255.0/375.0
-        static let collectionViewWidthToHeightMultiplier: CGFloat = collectionViewCellWightAspectRatio * collectionViewCellHeightToWightAspectRatio
+        static let collectionViewWidthToHeightMultiplier: CGFloat = collectionViewCellWightAspectRatio * collectionViewCellHeightToWightAspectRatio * 2
         static let collectionViewBottomOffset: CGFloat = 28.0
-        static let timerInterSpacing: CGFloat = 30.0
+        static let timerInterSpacing: CGFloat = 350.0
         static let userIndicatorOfset: CGFloat = 70.0
         static let userIndicatorHeight: CGFloat = 30.0
         static let headerLabelHeight: CGFloat = 42.0

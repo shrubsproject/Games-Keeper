@@ -25,7 +25,7 @@ final class ResultViewController: UIViewController{
         
         let stackView = UIStackView(arrangedSubviews: viewModel.scoreRank().map{ (Player, place) in
             let view = PlayerScoreView(frame: .zero)
-            view.setupFromPlayer(players: Player, place: place)
+            view.setupFromPlayer(Player: Player, place: place)
             return view
         })
         

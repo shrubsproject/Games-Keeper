@@ -23,10 +23,10 @@ class PlayerScoreView: UIView {
         commonInit()
     }
     
-    func setupFromPlayer(players: Player, place: Int) {
+    func setupFromPlayer(Player: Player, place: Int) {
         self.placeLabel.text = "#\(place)"
-        self.nameLabel.text = "\(players.name)"
-        self.scoreLabel.text = "\(players.score)"
+        self.nameLabel.text = Player.name
+        self.scoreLabel.text = "\(Player.score)"
     }
     
     func commonInit(){
@@ -34,13 +34,13 @@ class PlayerScoreView: UIView {
         addSubview(nameLabel)
         addSubview(scoreLabel)
         
-        placeLabel.font = UIFont(name: "Charter", size: 28)
+        placeLabel.font = UIFont(name: "Charter", size: 35)
         placeLabel.textColor = UIColor.white
         
-        nameLabel.font = UIFont(name: "Charter", size: 28)
+        nameLabel.font = UIFont(name: "Charter", size: 32)
         nameLabel.textColor = UIColor(named: "Color-2")
         
-        scoreLabel.font = UIFont(name: "Charter", size: 28)
+        scoreLabel.font = UIFont(name: "Charter", size: 35)
         scoreLabel.textColor = UIColor.white
         
         placeLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -48,12 +48,12 @@ class PlayerScoreView: UIView {
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            placeLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            placeLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             placeLabel.leftAnchor.constraint(equalTo: leftAnchor),
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            nameLabel.leftAnchor.constraint(equalTo: placeLabel.rightAnchor),
+            nameLabel.leftAnchor.constraint(equalTo: placeLabel.rightAnchor, constant: 8.0),
             scoreLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            scoreLabel.leftAnchor.constraint(equalTo: rightAnchor, constant: -40.0)
+            scoreLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -10.0)
         ])
     }
 }
