@@ -1,7 +1,7 @@
-# Games-Keeper
+# Games Keeper
 Данное риложение реализовано для подсчета очков в настольной игре с сохранением прогресса игры между перезапусками приложения.
-Приложение является упрощенной версией программы **Games Keeper**: [http://apps.apple.com/ru/app/games-keeper/id674138310#?platform=iphone](https://apps.apple.com/ru/app/games-keeper/id674138310#?platform=iphone)
-# О приложении
+Приложение является упрощенной версией программы [**Games Keeper**](https://apps.apple.com/ru/app/games-keeper/id674138310#?platform=iphone)
+# О приложении :tada:
 <img src="https://github.com/shrubsproject/Games-Keeper/blob/main/shrubsProject/1.png" width="250"> <img src="https://github.com/shrubsproject/Games-Keeper/blob/main/shrubsProject/3.png" width="250">
 
 ### Описание
