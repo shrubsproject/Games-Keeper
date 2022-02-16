@@ -4,10 +4,10 @@
 
 # Технологии :pager:
 
-* MVM - архитектура
+* Язык - Swift
+* MVVM - архитектура
 * UIKit - верстка кодом
 * Применение Protocol, Extension, Enum, Struct
-* Применение сильных/слабых ссылок
 
 # О приложении :tada:
 <img src="https://github.com/shrubsproject/Games-Keeper/blob/main/shrubsProject/1.png" width="250"> <img src="https://github.com/shrubsproject/Games-Keeper/blob/main/shrubsProject/3.png" width="250">
